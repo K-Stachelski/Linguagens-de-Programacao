@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulario </title>
+    <link rel="stylesheet" href="kimberlly.css">
+</head>
+
+<body> 
+    <form class="caixa-form">
+        <legend class="titulo-leg">  Cadastro de Usuario</legend>
+        <br>
+        <fieldset class="caixote-menor">
+            <legend class="titulo"> Dados Pessoais </legend>
+            <label for="nome completo">Nome Completo: 
+                <input class="entrada-escrito" type="text" id="nomecompleto" name="nome completo" required></label><br><br>
+
+           
+            <label for="email">Email: 
+                <input class="entrada-escrito" type="email" id="email" name="email" required><br></label><br>
+
+            
+            <label for="senha">Senha: 
+                <input class="entrada-escrito" type="password" id="senha" name="senha" required><br><br></label>
+            
+            <label for="nascimento">Data de Nascimento:
+                <input class="entrada-escrito" type="date" id="nascimento" name="nascimento" required><br></label>
+
+            <p> Gênero:</p>
+            <label for="fem">
+                <input type="radio" name="genero" value="fem" required> Feminino</label>
+            <label for="masc">
+                <input type="radio" name="genero" value="masc" required> Masculino</label>
+            <label for="ot">
+                <input type="radio" name="genero" value="ot" required> Outro</label><br><br>
+        </fieldset><br>
+ 
+        <fieldset class="caixote-menor">
+            <legend class="titulo"> Preferencias </legend>
+            <p> Interesses:</p>
+            <label for="prog">
+                <input type="checkbox" name="interesses" value="prog"> Programação</label>
+            <label for="design">
+                <input type="checkbox" name="interesses" value="ds"> Design</label>
+            <label for="gm">
+                <input type="checkbox" name="interesses" value="gm"> Games</label>
+            <label for="music">
+                <input type="checkbox" name="interesses" value="music"> Musica</label><br><br>
+            <label for="es">
+                <input type="checkbox" name="interesses" value="es"> Esportes</label><br><br>
+
+            <p> Estado: </p>
+                <select id="estado" name="estado">
+                    <option value="selecione"> selecione...</option>
+                    <option value="ms"> Mato Grosso do Sul</option>
+                    <option value="mt"> Mato Grosso</option>
+                    <option value="sp"> São Paulo</option>
+                    <option value="pr"> Paraná</option>
+                    <option value="rs"> Rio Grande do Sul</option>
+                </select>
+
+            <p> Observações: </p>
+                <label for="observacoes">
+                    <textarea type="text" name="observacoes" value="obs"></textarea>
+                </label>
+        </fieldset>
+
+        <br>
+        <button type="submit" class="botao-verde" onclick="alert('Obrigado por participar!')"> Enviar </button>
+        <button type="reset" class="botao"> Limpar </button>
+    </form>
+
+</body>
+</html>

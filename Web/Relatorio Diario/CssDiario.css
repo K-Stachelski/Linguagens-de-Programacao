@@ -1,0 +1,151 @@
+/* Ficar certinho na margem, sem separacao */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #d2c8c8;
+}
+
+/* Principal */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "menu subheader subheader"
+        "menu conteudo conteudo";
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 70px auto 1fr;
+    min-height: 100vh;
+}
+
+/* Cabeca maior */
+.header {
+    grid-area: header;
+    background: #174a5e;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .esquerda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .direito img {
+    margin-left: 10px;
+    cursor: pointer;  
+}
+
+/* Menu Lateral Esquerda */
+.menu {
+    grid-area: menu;
+    background: #225971;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Imagens no fim do menu */
+.menu-imagens {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    margin-top: auto; 
+}
+
+/* Botao do Menu */
+.botao-menu{
+    background: #225971;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 8px;   
+    font-size: 14px;    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.botao-menu img {
+    width: 29px;  
+    height: 26px;
+}
+
+.botao-menu:hover {
+    background: #1b4659;
+    color: rgb(255, 255, 255);
+}
+
+/* Cabecinha Nome da Disciplinas e afins */
+.subheader {
+    grid-area: subheader;
+    background: #2c5172;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    margin: 10px;
+}
+
+/* área dos botões */
+.botoes{
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;       
+    padding: 15px;    
+    background: #2c5172;
+    border-radius:#ffffff;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* estilo dos botões */
+.botao {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;  
+}
+
+.botao:hover {
+    background-color: #0256a0;
+}
+
+/* Conteudo Principal */
+.conteudo {
+    grid-area: conteudo;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    margin: 10px;
+    background: #efefef;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.conteudo h3 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+.conteudo h4 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.conteudo p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
